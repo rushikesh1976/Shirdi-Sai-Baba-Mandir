@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Shirdi Sai Baba Temple Slides</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f1e9d2 0%, #d9caa7 100%);
+    color: #4a3c1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .container {
+    width: 900px;
+    max-width: 95vw;
+    background: #fff9e6;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  header {
+    background: #a68c3f;
+    color: white;
+    padding: 24px 32px;
+    font-size: 2.7rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: center;
+    user-select: none;
+  }
+
+  .slides {
+    position: relative;
+    flex: 1;
+    padding: 30px 40px;
+    display: flex;
+    gap: 40px;
+    background: #fff9e6;
+    overflow: hidden;
+  }
+
+  .slide {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    right: 40px;
+    bottom: 30px;
+    display: flex;
+    gap: 40px;
+    opacity: 0;
+    transition: opacity 0.7s ease;
+    pointer-events: none;
+  }
+
+  .slide.active {
+    position: relative;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 2;
+  }
+
+  .slide-image {
+    flex: 0 0 450px;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 14px 40px rgba(0,0,0,0.10);
+  }
+
+  .slide-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    user-select: none;
+    border-radius: 18px;
+  }
+
+  .slide-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .slide-text h2 {
+    margin: 0 0 16px 0;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #997c2a;
+  }
+
+  .slide-text p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+  }
+
+  .thumbnails {
+    background: #f7f1d6;
+    display: flex;
+    justify-content: center;
+    gap: 22px;
+    padding: 18px 40px;
+    border-top: 3px solid #a68c3f;
+    overflow-x: auto;
+  }
+
+  .thumbnail {
+    width: 110px;
+    height: 70px;
+    border-radius: 14px;
+    border: 4px solid transparent;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: border-color 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .thumbnail:hover {
+    border-color: #b89431;
+  }
+
+  .thumbnail.active {
+    border-color: #a68c3f;
+  }
+
+  /* Scrollbar styling */
+  .thumbnails::-webkit-scrollbar {
+    height:8px;
+  }
+  .thumbnails::-webkit-scrollbar-track {
+    background:transparent;
+  }
+  .thumbnails::-webkit-scrollbar-thumb {
+    background:#a68c3f;
+    border-radius:4px;
+  }
+
+  @media (max-width: 960px) {
+    .container {
+      width: 90vw;
+    }
+  }
+</style>
+</head>
+<body>
+<div class="container" role="main" aria-label="Shirdi Sai Baba Temple slideshow">
+  <header>Shirdi Sai Baba Temple</header>
+  <div class="slides">
+    <article class="slide active" tabindex="0" aria-labelledby="slide1-title" aria-describedby="slide1-desc">
+      <div class="slide-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn170_qeGjsdqC-voItSNj19IjqisT-Z3sgzWOreqbIARTm54klQ0ayKmGFmhNuC0xNWc&usqp=CAU.jpg" alt="Shirdi Sai Baba Temple Exterior" />
+      </div>
+      <div class="slide-text">
+        <h2 id="slide1-title">Sacred Sai Baba Temple</h2>
+        <p id="slide1-desc">The Shirdi Sai Baba Temple is a sacred spiritual center located in Maharashtra, revered for the teachings of Sai Baba about love, compassion, and unity across faiths.</p>
+      </div>
+    </article>
+    <article class="slide" tabindex="0" aria-labelledby="slide2-title" aria-describedby="slide2-desc">
+      <div class="slide-image">
+        <img src="https://saibabaimages.com/wp-content/uploads/2022/02/Samadhi-Mandir-Sai-Baba-Photo-91-1024x683.jpg" alt="Samadhi Mandir of Sai Baba" />
+      </div>
+      <div class="slide-text">
+        <h2 id="slide2-title">Samadhi Mandir</h2>
+        <p id="slide2-desc">The Samadhi Mandir holds the final resting place of Sai Baba. Pilgrims visit here to seek blessings in a peaceful, spiritual atmosphere.</p>
+      </div>
+    </article>
+    <article class="slide" tabindex="0" aria-labelledby="slide3-title" aria-describedby="slide3-desc">
+      <div class="slide-image">
+        <img src="https://i0.wp.com/www.gozocabs.com/blog/wp-content/uploads/2016/09/shridi2.jpg" alt="Interior of Sai Baba Shrine" />
+      </div>
+      <div class="slide-text">
+        <h2 id="slide3-title">Interior Shrine</h2>
+        <p id="slide3-desc">The shrine’s interior is beautifully adorned, providing a serene environment for devotees to meditate and honor Sai Baba's teachings.</p>
+      </div>
+    </article>
+    <article class="slide" tabindex="0" aria-labelledby="slide4-title" aria-describedby="slide4-desc">
+      <div class="slide-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmWaBTO1LIzqL9472RORursMmUS2j01G7KG7tsvCjcs8BH1N3O5qsheOlEeAJssLVsLU0&usqp=CAU.jpg" alt="Sai Baba Museum Interior" />
+      </div>
+      <div class="slide-text">
+        <h2 id="slide4-title">Sai Baba Museum</h2>
+        <p id="slide4-desc">The museum preserves relics, photos, and historical items relating to Sai Baba, offering insights into his life and the temple’s heritage.</p>
+      </div>
+    </article>
+    <article class="slide" tabindex="0" aria-labelledby="slide5-title" aria-describedby="slide5-desc">
+      <div class="slide-image">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTanEAHTAi1xGBSUJmNw7zSmfXgjb5j5pT1Sw&s.jpg" alt="Auditorium near Sai Baba Temple" />
+      </div>
+      <div class="slide-text">
+        <h2 id="slide5-title">Community & Events</h2>
+        <p id="slide5-desc">The temple hosts spiritual gatherings, discourses, and community activities promoting devotion and unity among Sai Baba followers worldwide.</p>
+      </div>
+    </article>
+  </div>
+  <nav class="thumbnails" aria-label="Slide selection thumbnails">
+    <button class="thumbnail active" aria-selected="true" aria-controls="slider" aria-label="Select slide 1" data-slide="0" tabindex="0">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn170_qeGjsdqC-voItSNj19IjqisT-Z3sgzWOreqbIARTm54klQ0ayKmGFmhNuC0xNWc&usqp=CAU.jpg" alt="Thumbnail: Sacred Sai Baba Temple Exterior"/>
+    </button>
+    <button class="thumbnail" aria-selected="false" aria-controls="slider" aria-label="Select slide 2" data-slide="1" tabindex="-1">
+      <img src="https://saibabaimages.com/wp-content/uploads/2022/02/Samadhi-Mandir-Sai-Baba-Photo-91-1024x683.jpg" alt="Thumbnail: Samadhi Mandir"/>
+    </button>
+    <button class="thumbnail" aria-selected="false" aria-controls="slider" aria-label="Select slide 3" data-slide="2" tabindex="-1">
+      <img src="https://i0.wp.com/www.gozocabs.com/blog/wp-content/uploads/2016/09/shridi2.jpg" alt="Thumbnail: Interior Shrine"/>
+    </button>
+    <button class="thumbnail" aria-selected="false" aria-controls="slider" aria-label="Select slide 4" data-slide="3" tabindex="-1">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmWaBTO1LIzqL9472RORursMmUS2j01G7KG7tsvCjcs8BH1N3O5qsheOlEeAJssLVsLU0&usqp=CAU.jpg" alt="Thumbnail: Sai Baba Museum"/>
+    </button>
+    <button class="thumbnail" aria-selected="false" aria-controls="slider" aria-label="Select slide 5" data-slide="4" tabindex="-1">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0JgjK6WQr7PuFgS9WnQnl9-l14RfE1eG0LykMx-uHDniS0ZGKe6FywRFBT9ILK0-yXYg&usqp=CAU.jpg" alt="Thumbnail: Community Auditorium"/>
+    </button>
+  </nav>
+</div>
+<script>
+  const slides = document.querySelectorAll('.slide');
+  const thumbnails = document.querySelectorAll('.thumbnail');
+  let currentIndex = 0;
+
+  function setActiveSlide(index) {
+    if(index === currentIndex) return;
+    slides[currentIndex].classList.remove('active');
+    thumbnails[currentIndex].classList.remove('active');
+    thumbnails[currentIndex].setAttribute('aria-selected', 'false');
+    thumbnails[currentIndex].tabIndex = -1;
+
+    slides[index].classList.add('active');
+    thumbnails[index].classList.add('active');
+    thumbnails[index].setAttribute('aria-selected', 'true');
+    thumbnails[index].tabIndex = 0;
+    thumbnails[index].focus();
+
+    currentIndex = index;
+  }
+
+  thumbnails.forEach((thumb, idx) => {
+    thumb.addEventListener('click', () => setActiveSlide(idx));
+    thumb.addEventListener('keydown', e => {
+      if(e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        setActiveSlide(idx);
+      }
+    });
+  });
+
+  document.addEventListener('keydown', e => {
+    if(e.target.matches('.thumbnail') || e.target.closest('.thumbnail')) return;
+    if(e.key === 'ArrowRight') {
+      let next = (currentIndex + 1) % slides.length;
+      setActiveSlide(next);
+    } else if(e.key === 'ArrowLeft') {
+      let prev = (currentIndex - 1 + slides.length) % slides.length;
+      setActiveSlide(prev);
+    }
+  });
+</script>
+</body>
+</html>
+</content>
+</create_file>
